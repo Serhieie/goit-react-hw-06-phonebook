@@ -8,6 +8,7 @@ import normalizePhoneNumber from '../../helpers/numberNormalize';
 import normalizeName from 'helpers/nameNormalize';
 import { ErrorMessage } from 'formik';
 import { useSelector } from 'react-redux';
+import { getContacts } from '../../redux/contactsSlice';
 
 const initialValues = {
   name: '',
@@ -15,7 +16,7 @@ const initialValues = {
 };
 
 export function ContactForm({ onSubmit }) {
-  const contacts = useSelector(state => state.contacts.contacts);
+  const contacts = useSelector(getContacts);
 
   const handleSubmit = (values, { resetForm }) => {
     const { name, number } = values;
