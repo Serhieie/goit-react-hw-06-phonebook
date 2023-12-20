@@ -6,8 +6,8 @@ export function ContactTable({ getVisibleContacts, onDeleteContact }) {
     <div className="overflow-x-auto md:w-full">
       <table
         className="border-2 border-tableBorderColor border-collapese w-[525px]
-      mt-5 mb-5 block mx-auto overflow-auto h-[542px] ssm:text-3 md:w-[310px] md:max-w-lg 
-      mmd2:max-w-[430px] 1xl2:max-w-2xl skrB md2:w-[330px] ssm:w-[220px]"
+      mt-5 mb-5 block mx-auto overflow-auto h-[542px] ssm:text-1 md:w-[310px] sm2:w-[400px] md:max-w-lg 
+      mmd2:max-w-[430px] 1xl2:max-w-2xl skrB md2:w-[330px] ssm:w-[232px]"
       >
         <thead className="text-sm  right-0 left-0 top-0">
           <tr className="border-b-2 border-tableBorderColor">

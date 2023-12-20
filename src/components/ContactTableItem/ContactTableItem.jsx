@@ -26,16 +26,28 @@ export function ContactTableItem({ contact, index, onDeleteContact }) {
 
   return (
     <tr className="border-b-2 border-tableBorderColor">
-      <td width="5%" className="p-1 text-center bg-lightPartsColor  md:text-3">
+      <td
+        width="5%"
+        className="p-1 text-center bg-lightPartsColor  md:text-3 ssm:text-1"
+      >
         {index + 1}
       </td>
-      <td width="38%" className="p-1 text-center bg-lightPartsColor  md:text-3">
+      <td
+        width="38%"
+        className="p-1 text-center bg-lightPartsColor  md:text-md ssm:text-sm"
+      >
         {contact.name}
       </td>
-      <td width="42%" className="p-1 text-center bg-lightPartsColor  md:text-3">
+      <td
+        width="42%"
+        className="p-1 text-center bg-lightPartsColor  md:text-md ssm:text-sm"
+      >
         {normalizePhoneNumber(contact.number)}
       </td>
-      <td width="15%" className="p-1 text-center bg-lightPartsColor  md:text-3">
+      <td
+        width="15%"
+        className="p-1 text-center bg-lightPartsColor  md:text-md ssm:text-sm"
+      >
         <button
           id="delete-btn"
           onClick={openModal}

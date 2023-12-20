@@ -26,7 +26,7 @@ export function Input() {
       <label
         htmlFor="number"
         className="mt-6 text-xl flex items-center gap-2 md:ml-2 md:w-10/12
-      md:text-4 md2:text-sm font-medium"
+      md:text-4 font-medium md2:text-xs md2:mt-1"
       >
         <FiPhoneMissed className="ml-3 md:ml-6 w-[14px] h-[14px]" />
         Phone Number
