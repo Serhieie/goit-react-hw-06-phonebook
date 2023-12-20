@@ -7,21 +7,26 @@ import { AiOutlineUserAdd } from 'react-icons/ai';
 import normalizePhoneNumber from '../../helpers/numberNormalize';
 import normalizeName from 'helpers/nameNormalize';
 import { ErrorMessage } from 'formik';
+import { useSelector } from 'react-redux';
 
 const initialValues = {
   name: '',
   number: '',
 };
 
-export function ContactForm({ contacts, onSubmit }) {
-  const handleSubmit = (event, { resetForm }) => {
-    const { name, number } = event;
+export function ContactForm({ onSubmit }) {
+  const contacts = useSelector(state => state.contacts.contacts);
+
+  const handleSubmit = (values, { resetForm }) => {
+    const { name, number } = values;
 
     let someNum = normalizePhoneNumber(number);
     let normName = normalizeName(name);
+
     const isNameExists = contacts.some(
       contact => contact.name.toLowerCase() === normName.toLowerCase()
     );
+
     if (isNameExists) {
       return nameCheckerError();
     }
