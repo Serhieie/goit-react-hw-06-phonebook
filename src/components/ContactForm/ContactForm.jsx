@@ -45,9 +45,9 @@ export function ContactForm({ onSubmit }) {
       <Form
         autoComplete="off"
         className="flex gap-2 flex-col w-1/3 py-20 pr-7 pl-5 rounded-sm
-          shadow-lg shadow-shadowBox min-h-562 bg-gradient-to-tr
+          shadow-lg shadow-shadowBox  bg-gradient-to-tr
         from-smallWraperGradient1 to-smallWraperGradient2 md:py-7 md:px-5
-        md:min-h-0 md:w-11/12"
+        md:min-h-0 md:w-[99%]"
       >
         <h1 className="text-center text-3xl m-0 md:text-xl md2:text-xl font-bold ">
           Add Contact Field
@@ -55,7 +55,7 @@ export function ContactForm({ onSubmit }) {
         <Input />
         <div
           className="w-full flex justify-center items-center flex-col h-20 mt-2
-          md:text-base md:h-7"
+          md:text-base md:h-7 sm"
         >
           <ErrorMessage
             className="text-xl text-errorMsg m-0 p-0 items-center 
@@ -75,7 +75,7 @@ export function ContactForm({ onSubmit }) {
           className="text-center w-40 h-11 rounded-sm bg-buttonColor border-none 
             outline-none mx-auto mt-5 cursor-pointer shadow-md shadow-shadowBox
             flex items-center justify-around transition-all duration-300 text-buttonTextColor
-            text-4 hover:bg-buttonHoverColor md:w-40 md:h-11 md:mt-4 text-lg md2:w-32 md2:text-sm md2:h-8"
+            text-4 hover:bg-buttonHoverColor md:w-40 md:h-11 md:mt-4 text-lg md2:w-32 md2:text-sm md2:mt-5"
         >
           Add Contact <AiOutlineUserAdd />
         </button>
